@@ -1,0 +1,430 @@
+:root {
+  --blue-color: #0075ff;
+  --blue-alt-color: #0d69d5;
+  --orange-color: #f59e0b;
+  --green-color: #22c55e;
+  --red--color: #f44336;
+  --grey-color: #888;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Alexandria", sans-serif;
+  margin: 0;
+  direction: rtl;
+}
+
+*:focus {
+  outline: none;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+::-webkit-scrollbar {
+  width: 15px;
+}
+::-webkit-scrollbar-track {
+  background-color: white;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--blue-color);
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--blue-alt-color);
+}
+.page {
+  background-color: #f1f5f9;
+  min-height: 100vh;
+}
+/* Strt Sidebar */
+.sidebar {
+  width: 250px;
+  box-shadow: 0 0 10px #ddd;
+  background-color: white;
+  padding: 20px;
+  position: relative;
+}
+.sidebar > h3 {
+  position: relative;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 50px;
+  font-size: 30px;
+}
+.sidebar > h3::before {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 2px;
+  background-color: var(--blue-alt-color);
+  left: 50%;
+  transform: translatex(-50%);
+  bottom: -15px;
+}
+.sidebar > h3::after {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 4px solid white;
+  background: var(--green-color);
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -27px;
+}
+.sidebar ul li a {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: black;
+  border-radius: 6px;
+  padding: 10px;
+  transition: 0.5s;
+  margin-bottom: 5px;
+}
+.sidebar ul li a:hover {
+  background-color: #f6f6f6;
+  color: var(--blue-alt-color);
+}
+.sidebar ul li a span {
+  margin-right: 10px;
+  font-size: 14px;
+}
+/* End Sidebar */
+.content {
+  width: 100%;
+  overflow: hidden;
+  background-color: #eee;
+}
+/* Start Pgae */
+.page {
+  display: flex;
+}
+.page h1 {
+  position: relative;
+  margin: 20px 20px 60px;
+}
+.page h1::before,
+.page h1::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -10px;
+  height: 3px;
+}
+.page h1::before {
+  background-color: var(--blue-color);
+  width: 120px;
+}
+.page h1::after {
+  background-color: var(--green-color);
+  width: 40px;
+  transition: 0.5s;
+}
+.page h1:hover::after {
+  background-color: var(--green-color);
+  width: 120px;
+}
+/* End Pgae */
+/* Start Head */
+.head {
+  min-height: 70px;
+  position: relative;
+  background-color: white;
+  box-shadow: 10px 10px 10px #00000017;
+}
+.head img {
+  max-width: 120px;
+  position: absolute;
+  bottom: -46px;
+  left: calc(50% - 100px);
+  z-index: 3;
+}
+/* End Head */
+/* Start Boxs */
+.page .boxs {
+  margin: 0px 100px;
+}
+.content .box {
+  display: inline-block;
+  width: 500px;
+  position: relative;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  margin: 30px 10px;
+  text-align: center;
+}
+.content .box img {
+  position: absolute;
+  right: 0;
+  width: 100px;
+  top: -45px;
+  border: 10px solid #eee;
+  border-radius: 50%;
+}
+.content .box h2 {
+  margin: 0 0 10px;
+}
+.content .box .title {
+  color: var(--blue-color);
+  margin-bottom: 15px;
+  display: block;
+}
+.content .box p {
+  line-height: 1.5;
+  margin-top: 30px;
+  margin-bottom: 0;
+}
+/* End Boxs */
+/* Strt About Us*/
+.head.about-us {
+  margin-bottom: -38px;
+}
+.head.about-us img {
+  top: 0;
+}
+.about-us .landing {
+  max-width: 100%;
+  background-image: url(../images/landing.jpg);
+  background-size: cover;
+  height: calc(100vh - 70px);
+  position: relative;
+}
+.about-us .landing .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #00000099;
+}
+
+.about-us .landing .text-first {
+  position: relative;
+}
+.about-us .landing .text-first p {
+  padding: 40px 0;
+  color: white;
+  font-size: 40px;
+  text-align: center;
+  line-height: 2;
+}
+.about-us .landing .text-first p span {
+  display: block;
+  font-size: 80px;
+  font-weight: bold;
+}
+.about-us .info {
+  margin-left: 20px;
+  display: inline-flex;
+  text-align-last: center;
+  margin-bottom: 80px;
+}
+.about-us .info .text {
+  margin: 280px 20px 0 20px;
+}
+.about-us .info .text p {
+  line-height: 2;
+  color: var(--grey-color);
+}
+.about-us .info .six-img img {
+  width: 480px;
+}
+.about-us .boxs {
+  margin: 20px 50px;
+  text-align: center;
+}
+.about-us .boxs img {
+  right: 40%;
+}
+.about-us .boxs h3 {
+  text-align: center;
+  padding-top: 30px;
+}
+.about-us .boxs p {
+  padding-top: 20px;
+  text-align: center;
+  color: var(--grey-color);
+  line-height: 1.5;
+}
+.about-us .info-connection {
+  text-align: right;
+  margin-right: 30px;
+}
+.about-us .info-connection p {
+  color: var(--grey-color);
+  text-align: right;
+  margin-left: auto;
+  width: 500px;
+}
+
+.about-us .icons-conn > span {
+  display: block;
+  margin: 20px;
+  padding: 10px;
+}
+.about-us .icons-conn > span span {
+  margin-right: 10px;
+}
+
+/* End About Us*/
+/* Start Properties */
+.properties .maintable {
+  min-width: 1000px;
+  border-spacing: 0;
+  margin-right: 50px;
+  text-align: center;
+}
+.properties .maintable thead th {
+  background-color: #ccc;
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+  border-right: 1px solid #eee;
+}
+.properties .maintable td {
+  padding: 15px;
+}
+.properties .maintable tbody td {
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  transition: 0.5s;
+}
+.properties .maintable tr td:last-child {
+  border-left: 1px solid #ccc;
+}
+.properties .maintable tr:hover td {
+  background-color: #faf7f7;
+}
+.properties .maintable input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+}
+.properties .maintable span {
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+}
+.properties .maintable span::before {
+  font-family: "Font Awesome 6 Free";
+  content: "\f13a";
+  font-weight: 900;
+  transition: 0.5s;
+}
+.properties .maintable span:hover:before {
+  color: var(--blue-color);
+}
+.properties .maintable input[type="checkbox"]:checked + span::before {
+  content: "\f139";
+}
+.properties .maintable table tr td {
+  border-style: none;
+}
+.properties .maintable table td:last-child {
+  border-style: none;
+}
+.properties .maintable .details img {
+  max-width: 350px;
+  max-height: 350px;
+}
+.properties .continue-btn {
+  display: block;
+  margin: 25px auto;
+  padding: 10px;
+  border-radius: 6px;
+  outline: none;
+  border: none;
+  font-size: 20px;
+  color: white;
+  background-color: var(--blue-color);
+  cursor: pointer;
+  transition: 0.5s;
+}
+.properties .continue-btn:hover {
+  background-color: var(--blue-alt-color);
+}
+.properties .hidden-form {
+  display: none;
+}
+.properties .form-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.properties .modal-form {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: right;
+  max-width: 400px;
+  width: 90%;
+}
+.properties .success-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  z-index: 1001;
+}
+.properties .modal-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+.properties .modal-form h2 {
+  color: var(--blue-color);
+}
+.properties .modal-form label {
+  margin-bottom: 10px;
+}
+.properties .modal-form .captcha-code {
+  background-color: var(--blue-color);
+  padding: 5px;
+  margin-bottom: 5px;
+  color: white;
+  border-radius: 6px;
+}
+.properties .modal-form .submit-btn {
+  padding: 10px;
+  color: white;
+  font-size: 20px;
+  background-color: var(--blue-color);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.properties .modal-form .submit-btn:hover {
+  background-color: var(--blue-alt-color);
+}
+.properties .error {
+  color: red;
+}
+.properties .success-message {
+  color: var(--blue-color);
+  max-width: 350px;
+  line-height: 1.8;
+}
+.properties .success-message img {
+  width: 100px;
+}
+
+/* End Properties */
